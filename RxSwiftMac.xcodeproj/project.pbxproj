@@ -13,6 +13,12 @@
 		D10FCD4B1CCCFF420036C04A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10FCD491CCCFF420036C04A /* Main.storyboard */; };
 		D10FCD561CCCFF420036C04A /* RxSwiftMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10FCD551CCCFF420036C04A /* RxSwiftMacTests.swift */; };
 		D10FCD611CCCFF420036C04A /* RxSwiftMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10FCD601CCCFF420036C04A /* RxSwiftMacUITests.swift */; };
+		D10FCD701CCD09970036C04A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10FCD6E1CCD09970036C04A /* RxCocoa.framework */; };
+		D10FCD711CCD09970036C04A /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D10FCD6E1CCD09970036C04A /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D10FCD721CCD09970036C04A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10FCD6F1CCD09970036C04A /* RxSwift.framework */; };
+		D10FCD731CCD09970036C04A /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D10FCD6F1CCD09970036C04A /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D10FCD781CCD09C40036C04A /* RxCocoa.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = D10FCD761CCD09C40036C04A /* RxCocoa.framework.dSYM */; };
+		D10FCD791CCD09C40036C04A /* RxSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = D10FCD771CCD09C40036C04A /* RxSwift.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D10FCD741CCD09980036C04A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D10FCD731CCD09970036C04A /* RxSwift.framework in Embed Frameworks */,
+				D10FCD711CCD09970036C04A /* RxCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D10FCD751CCD09AE0036C04A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				D10FCD781CCD09C40036C04A /* RxCocoa.framework.dSYM in CopyFiles */,
+				D10FCD791CCD09C40036C04A /* RxSwift.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D10FCD401CCCFF420036C04A /* RxSwiftMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10FCD431CCCFF420036C04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +77,10 @@
 		D10FCD5C1CCCFF420036C04A /* RxSwiftMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10FCD601CCCFF420036C04A /* RxSwiftMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftMacUITests.swift; sourceTree = "<group>"; };
 		D10FCD621CCCFF420036C04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D10FCD6E1CCD09970036C04A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		D10FCD6F1CCD09970036C04A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		D10FCD761CCD09C40036C04A /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/Mac/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		D10FCD771CCD09C40036C04A /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10FCD721CCD09970036C04A /* RxSwift.framework in Frameworks */,
+				D10FCD701CCD09970036C04A /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +113,10 @@
 		D10FCD371CCCFF420036C04A = {
 			isa = PBXGroup;
 			children = (
+				D10FCD761CCD09C40036C04A /* RxCocoa.framework.dSYM */,
+				D10FCD771CCD09C40036C04A /* RxSwift.framework.dSYM */,
+				D10FCD6E1CCD09970036C04A /* RxCocoa.framework */,
+				D10FCD6F1CCD09970036C04A /* RxSwift.framework */,
 				D10FCD421CCCFF420036C04A /* RxSwiftMac */,
 				D10FCD541CCCFF420036C04A /* RxSwiftMacTests */,
 				D10FCD5F1CCCFF420036C04A /* RxSwiftMacUITests */,
@@ -132,6 +174,8 @@
 				D10FCD3C1CCCFF420036C04A /* Sources */,
 				D10FCD3D1CCCFF420036C04A /* Frameworks */,
 				D10FCD3E1CCCFF420036C04A /* Resources */,
+				D10FCD741CCD09980036C04A /* Embed Frameworks */,
+				D10FCD751CCD09AE0036C04A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -387,6 +431,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = RxSwiftMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stayrealhk.RxSwiftMac;
@@ -399,6 +447,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = RxSwiftMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stayrealhk.RxSwiftMac;

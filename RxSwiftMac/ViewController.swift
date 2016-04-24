@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import RxSwift
 
 class ViewController: NSViewController {
 
