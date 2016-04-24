@@ -8,9 +8,16 @@
 
 import Cocoa
 import RxSwift
+import RxCocoa
 
 class ViewController: NSViewController {
+    
+    let disposeBag = DisposeBag()
 
+    @IBOutlet weak var textField: NSTextField!
+    
+    @IBOutlet weak var label: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +29,12 @@ class ViewController: NSViewController {
                 number * 2
             }
             .subscribe { print($0) }
+        
+        let textFieldSequence = textField.rx_text
+        .observeOn(MainScheduler.instance)
+            
+        textFieldSequence.bindTo(label.rx_text)
+        .addDisposableTo(disposeBag)
     }
 
     override var representedObject: AnyObject? {
