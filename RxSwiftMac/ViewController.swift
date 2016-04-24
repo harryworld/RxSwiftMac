@@ -15,6 +15,13 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let sequence = Observable.of(1, 2, 3)
+        _ = sequence
+            .map { number in
+                number * 2
+            }
+            .subscribe { print($0) }
     }
 
     override var representedObject: AnyObject? {
