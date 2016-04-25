@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     let disposeBag = DisposeBag()
 
     @IBOutlet weak var textField: NSTextField!
+    @IBOutlet weak var checkboxButton: NSButton!
     
     @IBOutlet weak var label: NSTextField!
     
@@ -32,8 +33,19 @@ class ViewController: NSViewController {
         
         let textFieldSequence = textField.rx_text
         .observeOn(MainScheduler.instance)
+        
+        let checkboxSequence = checkboxButton.rx_state
+        .observeOn(MainScheduler.instance)
+        
+        let result = Observable.combineLatest(textFieldSequence, checkboxSequence) { (text, state) -> String in
+            if state == NSOnState {
+                return text
+            } else {
+                return "Disabled"
+            }
+        }
             
-        textFieldSequence.bindTo(label.rx_text)
+        result.bindTo(label.rx_text)
         .addDisposableTo(disposeBag)
     }
 

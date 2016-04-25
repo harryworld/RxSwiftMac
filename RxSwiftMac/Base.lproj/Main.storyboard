@@ -682,16 +682,24 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ndy-Le-wNm">
-                                <rect key="frame" x="222" y="132" width="37" height="17"/>
+                                <rect key="frame" x="190" y="132" width="100" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="x68-kx-SJU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xsr-nM-2jQ">
+                                <rect key="frame" x="314" y="189" width="61" height="18"/>
+                                <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="dxq-pD-ypt">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="checkboxButton" destination="Xsr-nM-2jQ" id="heT-39-Ehv"/>
                         <outlet property="label" destination="Ndy-Le-wNm" id="AJT-RU-IS8"/>
                         <outlet property="textField" destination="EIz-oL-XKO" id="Lhp-BF-2eA"/>
                     </connections>
